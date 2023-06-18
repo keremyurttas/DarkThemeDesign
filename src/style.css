@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+body {
+  font-family: "Jost", sans-serif;
+  @apply text-white;
+}
+.container {
+  @apply lg:max-w-6xl lg:max-h-[1440px] mx-auto py-4;
+}
+
+@tailwind utilities;
