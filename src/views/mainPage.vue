@@ -2,7 +2,7 @@
   <div class="bg-primary bg-grid h-full relative overflow-hidden">
     <my-navbar class="container mb-24"></my-navbar>
     <bg-clouds></bg-clouds>
-    <home-section class="container mb-24 xl:mb-[600px]"></home-section>
+    <home-section class="container mb-48 xl:mb-[600px]"></home-section>
     <home-footer class="container"></home-footer>
     <bg-draw></bg-draw>
   </div>

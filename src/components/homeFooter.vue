@@ -1,18 +1,18 @@
 <template>
-  <div class="z-10 relative">
+  <div class="z-10 relative lg:max-w-[1110px]">
     <section class="space-y-4">
-      <div class="flex justify-between px-7 border-b pb-14 border-primary">
-        <div class="w-2/5 text-4xl font-semibold space-y-3 relative">
-          <img
-            class="absolute -left-6 -top-1.5"
-            src="../assets/brand.svg"
-            alt=""
-          />
-
-          <img src="../assets/pseudo.svg" alt="" />
-          <h4>We’ve More Then 254+ Global Partners</h4>
-        </div>
-        <div class="w-[43%] text-secondary font-kumbh">
+      <div class="flex justify-between lg:gap-0 gap-4 items-center">
+        <HeaderWIllustritaion
+          :content="{
+            text: `Weve More Then 254+ Global Partners`,
+            img: 'brand',
+          }"
+          class="w-2/5 mb-20"
+        >
+        </HeaderWIllustritaion>
+        <div
+          class="w-[75%] text-secondary font-kumbh text-sm lg:text-base leading-8"
+        >
           <span
             >Sed ut perspiciatis unde omnis natus error voluptatem santium
             doloremque laudantium, totam rem aperiam, eaque ipsa quae ab nllo
@@ -20,6 +20,7 @@
           >
         </div>
       </div>
+      <hr class="w-[98%] mx-auto border-primary" />
       <div class="flex justify-between w-full">
         <button @click="handleClients('-')">
           <img src="../assets/Button.svg" alt="" />
@@ -54,6 +55,7 @@
 </template>
 <script setup>
 import { ref } from "vue";
+import HeaderWIllustritaion from "./HeaderWIllustritaion.vue";
 const clientIndex = ref(1);
 function handleClients(sign) {
   if (sign == "+" && clientIndex.value < 4) {
